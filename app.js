@@ -21,14 +21,10 @@ app.get("/",(req,res)=>{
         })
         respose.on('end',()=>{
             const websiteData = JSON.parse(body)
-            // const array = Object.keys(websiteData).map(key=>websiteData[key]);
             const array = Object.values(websiteData)
-             console.log(array)
             res.render('index',{webData: array, pageTitle: 'Quadbilal'})
          })
         })
-        
-    
     })
 
 
